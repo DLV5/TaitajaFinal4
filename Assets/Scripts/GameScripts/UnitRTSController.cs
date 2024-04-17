@@ -14,6 +14,7 @@ public class UnitRTSController : MonoBehaviour
     {
         _selectedUnitsRTS = new List<UnitRTS>();
         _unitsRTSPositionsCalculator = new UnitsRTSPositionsCalculator();
+
         _selectionAreaUI = GameObject.Find("SelectionArea").GetComponent<SelectionAreaUI>();
         _selectionAreaUI.OnSelectionEnded();
     }
@@ -44,7 +45,7 @@ public class UnitRTSController : MonoBehaviour
 
         List<Vector3> targetPositions =
             _unitsRTSPositionsCalculator.
-            GetPositionListAround(moveToPosition, new float[] { 1.5f, 2.5f, 3.5f }, new int[] {5, 10, 20});
+            GetPositionListAround(moveToPosition, new float[] { 3f, 4f, 5f }, new int[] {5, 10, 20});
 
         int targetPositionIndex = 0;
 

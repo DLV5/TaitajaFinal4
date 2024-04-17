@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Obstacle
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Selected
     uniqueID: 629311939
+    locked: 0
+  - name: Obstacle
+    uniqueID: 31321409
     locked: 0
   - name: Unit
     uniqueID: 1800347007

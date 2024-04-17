@@ -1,14 +1,15 @@
 using UnityEngine;
+using Pathfinding;
 
 public class UnitRTS : MonoBehaviour
 {
     private GameObject _selectedGameObject;
-    private IMovePosition _movePosition;
+    private Seeker _seeker;
 
     private void Awake()
     {
         _selectedGameObject = transform.Find("Selected").gameObject;
-        _movePosition = GetComponent<IMovePosition>();
+        _seeker = GetComponent<Seeker>();
         SetSelectedVisible(false);
     }
 
@@ -16,6 +17,6 @@ public class UnitRTS : MonoBehaviour
 
     public void MoveTo(Vector3 targetPosition)
     {
-        _movePosition.SetMovePosition(targetPosition);
+        _seeker.StartPath(transform.position, targetPosition);
     }
 }

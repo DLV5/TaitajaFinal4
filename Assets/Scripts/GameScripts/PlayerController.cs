@@ -4,10 +4,22 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private UnitRTSController _rtsUnitController;
+    private CameraControllerRTS _cameraController;
 
     private void Awake()
     {
         _rtsUnitController = GameObject.Find("RTSUnitController").GetComponent<UnitRTSController>();
+        _cameraController = GameObject.Find("CameraControllerRTS").GetComponent<CameraControllerRTS>();
+    }
+
+    public void MoveCamera(InputAction.CallbackContext context)
+    {
+        _cameraController.MoveCamera(context.ReadValue<Vector2>());
+    }
+
+    public void ZoomCamera(InputAction.CallbackContext context)
+    {
+        _cameraController.Zoom(context.ReadValue<float>());
     }
 
     public void SelectUnits(InputAction.CallbackContext context)
