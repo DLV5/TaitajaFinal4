@@ -24,11 +24,13 @@ public class UnitHealth : MonoBehaviour, IDamagable
         {
             _currentHealth = value;
 
-            OnPlayerHealthChanged(_currentHealth);
+            //OnPlayerHealthChanged(_currentHealth);
 
             if (_currentHealth <= 0)
             {
-                OnPlayerDied?.Invoke();
+                //OnPlayerDied?.Invoke();
+                Debug.Log("Unit Died");
+                gameObject.SetActive(false);
             }
         }
     }
@@ -36,7 +38,7 @@ public class UnitHealth : MonoBehaviour, IDamagable
     private void Start()
     {
         CurrentHealth = _maxHealth;
-        _playerHUD.SetHUD(_maxHealth, _currentHealth);
+        _playerHUD?.SetHUD(_maxHealth, _currentHealth);
     }
 
     public void TakeDamage(int damage)
