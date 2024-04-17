@@ -6,6 +6,15 @@
             "id": "bec70b54-491c-466b-85c9-781228ebb8e4",
             "actions": [
                 {
+                    "name": "SelectUnit",
+                    "type": "Button",
+                    "id": "b0b41129-2aec-49ab-9c3f-96ece01ec3a6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "52c7c4aa-10e0-4ede-a8ee-cb9a85d9ed4e",
@@ -24,6 +33,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "25dc3d08-90c0-41a2-9b47-4b4e7954ef1e",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "SelectUnit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

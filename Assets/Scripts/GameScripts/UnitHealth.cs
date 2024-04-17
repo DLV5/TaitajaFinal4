@@ -2,12 +2,12 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour, IDamagable
+public class UnitHealth : MonoBehaviour, IDamagable
 {
     public static event Action<int> OnPlayerHealthChanged;
     public static event Action OnPlayerDied;
 
-    [SerializeField] private PlayerHUD _playerHUD;
+    [SerializeField] private UnitHud _playerHUD;
 
     [SerializeField] private int _maxHealth;
 

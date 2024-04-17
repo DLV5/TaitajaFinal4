@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Selected
+    uniqueID: 629311939
+    locked: 0
+  - name: Unit
+    uniqueID: 1800347007
+    locked: 0
+  - name: SelectionArea
+    uniqueID: 252945107
+    locked: 0

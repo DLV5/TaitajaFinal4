@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHUD : MonoBehaviour
+public class UnitHud : MonoBehaviour
 {
     [SerializeField] private Slider _healthSlider;
     [SerializeField] private Slider _easeHealthSlider;
@@ -10,7 +10,7 @@ public class PlayerHUD : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerHealth.OnPlayerHealthChanged += SetHealth;
+        UnitHealth.OnPlayerHealthChanged += SetHealth;
     }
 
     private void Update()
@@ -23,7 +23,7 @@ public class PlayerHUD : MonoBehaviour
 
     private void OnDisable()
     {
-        PlayerHealth.OnPlayerHealthChanged -= SetHealth;
+        UnitHealth.OnPlayerHealthChanged -= SetHealth;
     }
 
     public void SetHUD(int maxHealth, int currentHealth)
