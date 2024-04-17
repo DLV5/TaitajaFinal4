@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: RoundMan_1
+    uniqueID: 1429034319
+    locked: 0
+  - name: RoundMan_2
+    uniqueID: 3741443953
+    locked: 0
