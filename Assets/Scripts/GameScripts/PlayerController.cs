@@ -3,11 +3,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private RTSUnitController _rtsUnitController;
+    private UnitRTSController _rtsUnitController;
 
     private void Awake()
     {
-        _rtsUnitController = GameObject.Find("RTSUnitController").GetComponent<RTSUnitController>();
+        _rtsUnitController = GameObject.Find("RTSUnitController").GetComponent<UnitRTSController>();
     }
 
     public void SelectUnits(InputAction.CallbackContext context)
