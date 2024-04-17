@@ -44,6 +44,41 @@ public class RTSUnitController : MonoBehaviour
         SelectUnitsInCollider(collider2DArray);
     }
 
+    public void MoveSelectedUnitsToMousePosition()
+    {
+        Vector3 moveToPosition = GetMouseWorldPosition();
+
+        List<Vector3> targetPositions = GetPositionListAround(moveToPosition, 1.5f, 5);
+
+        int targetPositionIndex = 0;
+
+        foreach(UnitRTS unitRTS in _selectedUnitsRTS)
+        {
+            unitRTS.MoveTo(targetPositions[targetPositionIndex]);
+            targetPositionIndex = (targetPositionIndex + 1) % targetPositions.Count;
+        }
+    }
+
+    private List<Vector3> GetPositionListAround(Vector3 startPoint, float distance, int positionCount)
+    {
+        List<Vector3> postionList = new List<Vector3>();
+
+        for (int i = 0; i < positionCount; i++)
+        {
+            float angle = i * (360f / positionCount);
+            Vector3 direction = ApplyRotationToVector(new Vector3(1, 0), angle);
+            Vector3 position = startPoint + direction * distance;
+            postionList.Add(position);
+        }
+
+        return postionList;
+    }
+
+    private Vector3 ApplyRotationToVector(Vector3 vector, float angle)
+    {
+        return Quaternion.Euler(0, 0, angle) * vector;
+    }
+
     private void ScaleSelectionArea()
     {
         Vector3 currentMousePosition = GetMouseWorldPosition();

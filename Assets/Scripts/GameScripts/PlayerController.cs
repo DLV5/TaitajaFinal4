@@ -19,6 +19,12 @@ public class PlayerController : MonoBehaviour
             _rtsUnitController.OnSelectionEnded();
     }
 
+    public void MoveSelectedUnits(InputAction.CallbackContext context)
+    {
+        if(context.started)
+            _rtsUnitController.MoveSelectedUnitsToMousePosition();
+    }
+
     public void Pause(InputAction.CallbackContext context)
     {
         if (!context.performed) return;

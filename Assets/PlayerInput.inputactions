@@ -6,9 +6,18 @@
             "id": "bec70b54-491c-466b-85c9-781228ebb8e4",
             "actions": [
                 {
-                    "name": "SelectUnit",
+                    "name": "SelectUnits",
                     "type": "Button",
                     "id": "b0b41129-2aec-49ab-9c3f-96ece01ec3a6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveSelectedUnits",
+                    "type": "Button",
+                    "id": "634358e5-cf6d-436e-9876-448ab7fa3a88",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -43,7 +52,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "SelectUnit",
+                    "action": "SelectUnits",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2880fad9-1d50-41b7-916b-a8f937b51c95",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "MoveSelectedUnits",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
