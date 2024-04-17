@@ -47,6 +47,9 @@ TagManager:
   - name: Obstacle
     uniqueID: 31321409
     locked: 0
+  - name: CircleStickman1
+    uniqueID: 626836671
+    locked: 0
   - name: Unit
     uniqueID: 1800347007
     locked: 0
