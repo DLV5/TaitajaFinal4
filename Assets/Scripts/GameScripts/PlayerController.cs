@@ -45,4 +45,8 @@ public class PlayerController : MonoBehaviour
             GameManager.Instance.CurrentState == GameState.Paused ? GameState.Playing : GameState.Paused;
         GameManager.Instance.ChangeGameState(stateToChange);
     }
+    public void CloseBuildingMenu(InputAction.CallbackContext context)
+    {
+        //_castle.ExitBuildingMode();
+    }
 }

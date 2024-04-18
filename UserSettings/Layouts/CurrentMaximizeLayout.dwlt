@@ -47,6 +47,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 580
     y: 73
+    width: 558
     width: 965
     height: 530
   m_SerializedDataModeController:
@@ -104,6 +105,7 @@ MonoBehaviour:
       width: 965
       height: 509
     m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 279, y: 254.5}
     m_Translation: {x: 482.5, y: 254.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -113,10 +115,12 @@ MonoBehaviour:
       serializedVersion: 2
       x: -482.5
       y: -254.5
+      width: 558
       width: 965
       height: 509
     m_MinimalGUI: 1
   m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 558, y: 530}
   m_LastWindowPixelSize: {x: 965, y: 530}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -687,6 +691,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 297.25558, y: 377.7489, z: -2.89536}
     speed: 2
+    m_Value: {x: 2.62, y: 0.94000006, z: 0}
     m_Value: {x: 297.25558, y: 377.7489, z: -2.89536}
   m_RenderMode: 0
   m_CameraMode:
@@ -739,6 +744,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 221.22433
     speed: 2
+    m_Value: 3.3225064
     m_Value: 221.22433
   m_Ortho:
     m_Target: 0
@@ -868,6 +874,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 580
     y: 0
+    width: 560
     width: 967
     height: 551
   m_MinSize: {x: 200, y: 200}

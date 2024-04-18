@@ -25,7 +25,7 @@ public class BuildFacilityButton : MonoBehaviour
 
     private void OnDestroy()
     {
-        _button.onClick.RemoveListener(AssignCursorFacility);
+        _button.onClick.RemoveAllListeners();
     }
 
     private void AssignCursorFacility()
