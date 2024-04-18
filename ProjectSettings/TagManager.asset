@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Ally
   layers:
   - Default
   - TransparentFX
@@ -12,7 +14,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Obstacle
   - 
   - 
   - 
@@ -41,9 +43,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: RoundMan_1
-    uniqueID: 1429034319
+  - name: Selected
+    uniqueID: 629311939
     locked: 0
-  - name: RoundMan_2
-    uniqueID: 3741443953
+  - name: Obstacle
+    uniqueID: 31321409
+    locked: 0
+  - name: CircleStickman1
+    uniqueID: 626836671
+    locked: 0
+  - name: Unit
+    uniqueID: 1800347007
+    locked: 0
+  - name: WorldCanvas
+    uniqueID: 3470355221
+    locked: 0
+  - name: SelectionArea
+    uniqueID: 252945107
     locked: 0
