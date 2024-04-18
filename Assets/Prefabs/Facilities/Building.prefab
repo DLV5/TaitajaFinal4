@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 2086665269125971300}
   - component: {fileID: 2072040961974488550}
   - component: {fileID: 8280062187429621652}
+  - component: {fileID: 1656216573113857088}
   m_Layer: 0
   m_Name: Building
   m_TagString: Ally
@@ -380,6 +381,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bloodParticles: {fileID: 1824938997713809381, guid: 9b24684ac11206c41be7edae36af7658, type: 3}
+--- !u!114 &1656216573113857088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5912496557440752547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b7dd72282ff854b9593fa3382b7a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 2f0a65110595a3f4594d3d68d3bc4630, type: 2}
+  duration: 0.25
+  targetMaterials:
+  - TargetMaterial: {fileID: 2100000, guid: 2f0a65110595a3f4594d3d68d3bc4630, type: 2}
+    BaseMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    Renderer: {fileID: 2390603626140058129}
 --- !u!1001 &1736801236589257545
 PrefabInstance:
   m_ObjectHideFlags: 0

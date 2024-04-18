@@ -5,6 +5,7 @@ using UnityEngine;
 public class UnitHealth : MonoBehaviour, IDamagable
 {
     public event Action<int> OnUnitHealthChanged;
+    public event Action OnUnitDamaged;
     public event Action OnUnitDied;
 
     [SerializeField] private UnitHUD _playerHUD;
@@ -44,6 +45,8 @@ public class UnitHealth : MonoBehaviour, IDamagable
         if (_isInvincible) return;
 
         CurrentHealth -= damage;
+
+        OnUnitDamaged?.Invoke();
 
         StartCoroutine(EnterAndExitInvincibility());
     }
