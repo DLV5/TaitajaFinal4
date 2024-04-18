@@ -307,7 +307,7 @@ PrefabInstance:
     - target: {fileID: 2724972601354868906, guid: 3b1080811f32bb34092ef15fd8ddb5f0, type: 3}
       propertyPath: _associatedFacility
       value: 
-      objectReference: {fileID: 2086665269125971300, guid: ecd4a217d0053a740ab0bed45f63560c, type: 3}
+      objectReference: {fileID: 6825322582795489143, guid: 17ecb03f0887f0f47ae3e4693065ce74, type: 3}
     - target: {fileID: 6881620351814244362, guid: 3b1080811f32bb34092ef15fd8ddb5f0, type: 3}
       propertyPath: m_text
       value: Build Gold Mine
@@ -453,7 +453,7 @@ PrefabInstance:
     - target: {fileID: 2724972601354868906, guid: 3b1080811f32bb34092ef15fd8ddb5f0, type: 3}
       propertyPath: _associatedFacility
       value: 
-      objectReference: {fileID: 2086665269125971300, guid: 1200b5a81b34bee4484617dd0c2f98f6, type: 3}
+      objectReference: {fileID: 779844850056111843, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
     - target: {fileID: 2752924176876155503, guid: 3b1080811f32bb34092ef15fd8ddb5f0, type: 3}
       propertyPath: _buildingPrice
       value: 50
@@ -1610,6 +1610,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <GameState>k__BackingField: 1
+--- !u!1001 &819679126
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4911926947444883492, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_Name
+      value: Barracs
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011300190297187382, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011300190297187382, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816412703997662899, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.11214
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816412703997662899, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.771842
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816412703997662899, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816412703997662899, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816412703997662899, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816412703997662899, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816412703997662899, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816412703997662899, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816412703997662899, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816412703997662899, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780126348809378693, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780126348809378693, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0cd6f9eb1136d184c9d124aebd325fd1, type: 3}
 --- !u!1001 &885990659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33064,7 +33137,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 252945107
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c33871c8638eb4c41bfb4577f3b58627, type: 3}
   m_Color: {r: 0.29803923, g: 0.81960785, b: 0.21568628, a: 0.56078434}
@@ -33185,6 +33258,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.94129944
       objectReference: {fileID: 0}
+    - target: {fileID: 2724972601354868906, guid: 3b1080811f32bb34092ef15fd8ddb5f0, type: 3}
+      propertyPath: _associatedFacility
+      value: 
+      objectReference: {fileID: 9099927565278279631, guid: 5603afdf6a3c8bb48a830fa19931a393, type: 3}
     - target: {fileID: 6881620351814244362, guid: 3b1080811f32bb34092ef15fd8ddb5f0, type: 3}
       propertyPath: m_text
       value: Build House
@@ -34478,3 +34555,4 @@ SceneRoots:
   - {fileID: 933890402}
   - {fileID: 1858384001}
   - {fileID: 1926844818}
+  - {fileID: 819679126}

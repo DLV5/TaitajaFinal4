@@ -40,7 +40,7 @@ public class UnitRTS : MonoBehaviour
 
     private void OnTargetFound(Transform target)
     {
-        if (target.GetComponent<UnitRTS>().Team == _team) return;
+        if (target.CompareTag(transform.tag)) return;
 
         MoveTo(target.position);
     }

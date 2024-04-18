@@ -33,7 +33,6 @@ public class GridSystem: MonoBehaviour
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + _cellSize), Color.red, 100f);
             }
         }
-        Debug.Log(_tileArray.GetLength(0) +" " + _tileArray.GetLength(1));
     }
 
     public void SetValue(Vector3 worldPosition, Facility facility)
@@ -48,7 +47,6 @@ public class GridSystem: MonoBehaviour
                     _tileArray[CellPosition.x, CellPosition.y] = null;
                 }
                 SpawnFacilityOnTile(facility, GetWorldPosition(x, y));
-                Debug.Log("New House Placed :)");
             }
         }
     }

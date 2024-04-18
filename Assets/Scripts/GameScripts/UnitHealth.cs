@@ -7,7 +7,7 @@ public class UnitHealth : MonoBehaviour, IDamagable
     public event Action<int> OnUnitHealthChanged;
     public event Action OnUnitDied;
 
-    [SerializeField] private UnitHud _playerHUD;
+    [SerializeField] private UnitHUD _playerHUD;
 
     [SerializeField] private int _maxHealth;
 
@@ -24,7 +24,7 @@ public class UnitHealth : MonoBehaviour, IDamagable
         {
             _currentHealth = value;
 
-            OnUnitHealthChanged(_currentHealth);
+            OnUnitHealthChanged?.Invoke(_currentHealth);
 
             if (_currentHealth <= 0)
             {

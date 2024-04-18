@@ -43,5 +43,10 @@ public class GoldManager : MonoBehaviour
 
     public void SpendGold(int amount) => CurrentGold -= amount;
 
-    private void AddGold() => CurrentGold += _goldPerSecond;
+    private void AddGold()
+    {
+        if (GameManager.Instance.CurrentState != GameState.Playing)
+            return;
+        CurrentGold += _goldPerSecond;
+    }
 }

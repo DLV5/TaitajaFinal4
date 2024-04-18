@@ -10,10 +10,12 @@ public class UnitDamage : MonoBehaviour
     [SerializeField] private float _detectionRadius = 2f;
 
     [SerializeField] private int _damage = 2;
+    [SerializeField] private float _damageFriequencyPerSecond = 1;
 
     private float _scanRepeatRate = 1f;
 
     private bool _isAttacking = false;
+    private IDamagable _currentTarget;
 
     private void OnEnable()
     {
@@ -70,12 +72,30 @@ public class UnitDamage : MonoBehaviour
 
         if(damagable != null)
         {
-            Debug.Log("Damaged: " + collision.transform.name);
-            damagable.TakeDamage(_damage);
+            _isAttacking = true;
+
+            _currentTarget = damagable;
+
+            StartCoroutine(DamageWithFriequency());
 
             OnDamagedOtherUnit?.Invoke(collision.transform.position);
         }
         
+    }
+
+    private IEnumerator DamageWithFriequency()
+    {
+        while (_isAttacking)
+        {
+            _currentTarget.TakeDamage(_damage);
+            yield return new WaitForSeconds(1 / _damageFriequencyPerSecond);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        _currentTarget = null;
+        _isAttacking = false;
     }
 
     private void OnDrawGizmos()

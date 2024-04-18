@@ -55,6 +55,9 @@ TagManager:
   - name: Unit
     uniqueID: 1800347007
     locked: 0
+  - name: Building
+    uniqueID: 1200015921
+    locked: 0
   - name: WorldCanvas
     uniqueID: 3470355221
     locked: 0
