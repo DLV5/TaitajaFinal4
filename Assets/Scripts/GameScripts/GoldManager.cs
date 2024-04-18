@@ -38,5 +38,8 @@ public class GoldManager : MonoBehaviour
         InvokeRepeating("AddGold", 0, 1f);
     }
 
+    public void IncreaseGoldPerSecond(int amount) => _goldPerSecond += amount;
+    public void DecreaseGoldPerSecond(int amount) => _goldPerSecond -= amount;
+
     private void AddGold() => CurrentGold += _goldPerSecond;
 }
