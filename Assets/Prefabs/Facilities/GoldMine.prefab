@@ -96,8 +96,9 @@ GameObject:
   - component: {fileID: 2390603626140058129}
   - component: {fileID: 5683144453333631943}
   - component: {fileID: 2086665269125971300}
+  - component: {fileID: 5639017195674755881}
   m_Layer: 0
-  m_Name: House
+  m_Name: GoldMine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +162,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -264992234, guid: 1316aa2ed7b1a39439cf76ccf3ee420f, type: 3}
-  m_Color: {r: 0, g: 0.5921569, b: 0.9019608, a: 1}
+  m_Color: {r: 0.9843137, g: 0.77254903, b: 0.19215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -230,3 +231,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <WidthInCells>k__BackingField: 3
   <HeightInCells>k__BackingField: 3
+--- !u!114 &5639017195674755881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5912496557440752547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410f1ae1f8c39a64e8a842e4789edaf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _increaseGoldAmount: 2

@@ -41,5 +41,7 @@ public class GoldManager : MonoBehaviour
     public void IncreaseGoldPerSecond(int amount) => _goldPerSecond += amount;
     public void DecreaseGoldPerSecond(int amount) => _goldPerSecond -= amount;
 
+    public void SpendGold(int amount) => CurrentGold -= amount;
+
     private void AddGold() => CurrentGold += _goldPerSecond;
 }

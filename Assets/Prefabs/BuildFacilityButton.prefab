@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.8125161, y: 1}
-  m_AnchoredPosition: {x: 0.4980011, y: 0.9413004}
+  m_AnchoredPosition: {x: 0.4980011, y: 0.94129944}
   m_SizeDelta: {x: 0.99699974, y: -1.8826}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2176401279443639429
@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 1307492282652800859}
   - component: {fileID: 6137248500437835256}
   - component: {fileID: 2724972601354868906}
+  - component: {fileID: 2752924176876155503}
   m_Layer: 5
   m_Name: BuildFacilityButton
   m_TagString: Untagged
@@ -331,7 +332,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1307492282652800859}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2752924176876155503}
+        m_TargetAssemblyTypeName: GoldButton, Assembly-CSharp
+        m_MethodName: SpendGold
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2724972601354868906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,3 +358,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _associatedFacility: {fileID: 2086665269125971300, guid: e40ed93c877bad94e8bf0f7e21f93d1c, type: 3}
+--- !u!114 &2752924176876155503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8436012676634697424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b4e9a8f20d1d545b82606f51a6e87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buildingPrice: 30
