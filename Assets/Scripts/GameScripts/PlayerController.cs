@@ -5,11 +5,13 @@ public class PlayerController : MonoBehaviour
 {
     private UnitRTSController _rtsUnitController;
     private CameraControllerRTS _cameraController;
+    private Castle _castle;
 
     private void Awake()
     {
         _rtsUnitController = GameObject.Find("RTSUnitController").GetComponent<UnitRTSController>();
         _cameraController = GameObject.Find("CameraControllerRTS").GetComponent<CameraControllerRTS>();
+        _castle = GameObject.Find("Castle").GetComponent<Castle>();
     }
 
     public void MoveCamera(InputAction.CallbackContext context)
@@ -44,5 +46,9 @@ public class PlayerController : MonoBehaviour
         var stateToChange = 
             GameManager.Instance.CurrentState == GameState.Paused ? GameState.Playing : GameState.Paused;
         GameManager.Instance.ChangeGameState(stateToChange);
+    }
+    public void CloseBuildingMenu(InputAction.CallbackContext context)
+    {
+        _castle.ExitBuildingMode();
     }
 }

@@ -56,7 +56,7 @@ public class CustomBuildingCursor : MonoBehaviour
     /// <summary>
     /// Called when the object is built or building is canceled, disables cursor visualization
     /// </summary>
-    public void OnFacilityBuilded()
+    public void ResetCursor()
     {
         _spriteRenderer.enabled = false;
         _associatedFacility = null;

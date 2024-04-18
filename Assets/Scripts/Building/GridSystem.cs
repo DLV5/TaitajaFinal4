@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class GridSystem: MonoBehaviour
 {
+    private Transform _tilesParent;
     private Tile _tilePrefab;
 
     private int[,] _gridArray;
@@ -15,13 +16,14 @@ public class GridSystem: MonoBehaviour
     private int _height;
     private int _cellSize;
 
-    public void CreateGrid(int width, int height, int cellSize, Tile tilePrefab)
+    public void CreateGrid(int width, int height, int cellSize, Tile tilePrefab, Transform tilesParent)
     {
         _width = width;
         _height = height;
         _tileArray = new Tile[width, height];
         _cellSize = cellSize;
         _tilePrefab = tilePrefab;
+        _tilesParent = tilesParent;
 
         //Instantiating the grid
         for (int x = 0; x < width; x++)
@@ -134,7 +136,7 @@ public class GridSystem: MonoBehaviour
 
     private Tile SpawnTile(Vector3 position)
     {
-        Tile tile = Instantiate(_tilePrefab, position + new Vector3(_cellSize, _cellSize) * .5f, Quaternion.identity);
+        Tile tile = Instantiate(_tilePrefab, position + new Vector3(_cellSize, _cellSize) * .5f, Quaternion.identity, _tilesParent);
         return tile;
     }
 
