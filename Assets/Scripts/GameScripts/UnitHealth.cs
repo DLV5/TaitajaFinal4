@@ -28,9 +28,7 @@ public class UnitHealth : MonoBehaviour, IDamagable
 
             if (_currentHealth <= 0)
             {
-                //OnUnitDied?.Invoke();
-                Debug.Log("Unit Died");
-                gameObject.SetActive(false);
+                OnUnitDied?.Invoke();
             }
         }
     }

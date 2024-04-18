@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 1943712513344704836}
   - component: {fileID: 561699787996019756}
   - component: {fileID: 7145149308532914534}
+  - component: {fileID: 8640454306758122950}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Ally
@@ -347,6 +348,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &8640454306758122950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6465089638012269024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68d5fd8d268a2f4d9c73a475e50ce56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bloodParticles: {fileID: 1824938997713809381, guid: 822b7a3787c66c64e87d8f72f9298bf0, type: 3}
 --- !u!1 &7610268711318465586
 GameObject:
   m_ObjectHideFlags: 0
