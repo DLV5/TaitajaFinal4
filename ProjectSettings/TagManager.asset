@@ -55,6 +55,9 @@ TagManager:
   - name: Unit
     uniqueID: 1800347007
     locked: 0
+  - name: WorldCanvas
+    uniqueID: 3470355221
+    locked: 0
   - name: SelectionArea
     uniqueID: 252945107
     locked: 0

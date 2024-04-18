@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UnitRTSController : MonoBehaviour
@@ -70,7 +71,7 @@ public class UnitRTSController : MonoBehaviour
         {
             UnitRTS unitRTS = collider2D.GetComponent<UnitRTS>();
 
-            if (unitRTS != null)
+            if (unitRTS != null && unitRTS.CompareTag("Ally"))
             {
                 unitRTS.SetSelectedVisible(true);
                 _selectedUnitsRTS.Add(unitRTS);

@@ -8,9 +8,11 @@ public class UnitHud : MonoBehaviour
 
     [SerializeField] private float _easeLerpSpeed = 0.05f;
 
+    [SerializeField] private UnitHealth _helathScript;
+
     private void OnEnable()
     {
-        UnitHealth.OnPlayerHealthChanged += SetHealth;
+        _helathScript.OnUnitHealthChanged += SetHealth;
     }
 
     private void Update()
@@ -23,7 +25,7 @@ public class UnitHud : MonoBehaviour
 
     private void OnDisable()
     {
-        UnitHealth.OnPlayerHealthChanged -= SetHealth;
+        _helathScript.OnUnitHealthChanged -= SetHealth;
     }
 
     public void SetHUD(int maxHealth, int currentHealth)

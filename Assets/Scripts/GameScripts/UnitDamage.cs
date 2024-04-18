@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UnitDamage : MonoBehaviour
 {
+    public event Action<Vector3> OnDamagedOtherUnit;
     public event Action<Transform> OnTargetWasFound;
 
     [SerializeField] private float _detectionRadius = 2f;
@@ -14,7 +15,7 @@ public class UnitDamage : MonoBehaviour
 
     private bool _isAttacking = false;
 
-    private void Start()
+    private void OnEnable()
     {
         InvokeRepeating("StartTryToFindTargetCoroutine", 0f, _scanRepeatRate);
     }
@@ -22,6 +23,17 @@ public class UnitDamage : MonoBehaviour
     private void StartTryToFindTargetCoroutine()
     {
         StartCoroutine(TryToFindTarget());
+    }
+    
+    private void StopTryToFindTargetCoroutine()
+    {
+        StopCoroutine(TryToFindTarget());
+    }
+
+    private void OnDisable()
+    {
+        StopTryToFindTargetCoroutine();
+        CancelInvoke();
     }
 
     private IEnumerator TryToFindTarget()
@@ -48,16 +60,22 @@ public class UnitDamage : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Enemy"))
-        {
-            IDamagable damagable = collision.transform.GetComponent<IDamagable>();
+        if (!(collision.transform.CompareTag("Enemy") || collision.transform.CompareTag("Ally")))
+            return;
 
-            if(damagable != null)
-            {
-                Debug.Log("Damaged: " + collision.transform.name);
-                damagable.TakeDamage(_damage);
-            }
+        if (collision.transform.CompareTag(gameObject.transform.tag))
+            return;
+
+        IDamagable damagable = collision.transform.GetComponent<IDamagable>();
+
+        if(damagable != null)
+        {
+            Debug.Log("Damaged: " + collision.transform.name);
+            damagable.TakeDamage(_damage);
+
+            OnDamagedOtherUnit?.Invoke(collision.transform.position);
         }
+        
     }
 
     private void OnDrawGizmos()

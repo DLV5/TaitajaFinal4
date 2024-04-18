@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UnitHealth : MonoBehaviour, IDamagable
 {
-    public static event Action<int> OnPlayerHealthChanged;
-    public static event Action OnPlayerDied;
+    public event Action<int> OnUnitHealthChanged;
+    public event Action OnUnitDied;
 
     [SerializeField] private UnitHud _playerHUD;
 
@@ -24,11 +24,11 @@ public class UnitHealth : MonoBehaviour, IDamagable
         {
             _currentHealth = value;
 
-            //OnPlayerHealthChanged(_currentHealth);
+            OnUnitHealthChanged(_currentHealth);
 
             if (_currentHealth <= 0)
             {
-                //OnPlayerDied?.Invoke();
+                //OnUnitDied?.Invoke();
                 Debug.Log("Unit Died");
                 gameObject.SetActive(false);
             }
