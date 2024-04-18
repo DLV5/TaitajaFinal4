@@ -23,6 +23,8 @@ public class UnitDeath : MonoBehaviour
 
     private void OnUnitDied()
     {
+        Instantiate(_bloodParticles, transform.position, Quaternion.identity);
+
         gameObject.SetActive(false);
     }
 }
